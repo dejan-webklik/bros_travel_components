@@ -1,0 +1,24 @@
+name: Build Joomla Component
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Create component ZIP
+        run: |
+          zip -r com_brostravel.zip administrator components com_brostravel.xml
+
+      - name: Upload ZIP artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: com_brostravel
+          path: com_brostravel.zip
