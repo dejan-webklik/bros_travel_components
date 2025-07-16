@@ -32,3 +32,9 @@ jobs:
 
     - name: Zip component
       run: zip -r com_brostravel.zip administrator components
+
+    - name: Upload component zip
+      uses: actions/upload-artifact@v3
+      with:
+        name: com_brostravel
+        path: com_brostravel.zip
