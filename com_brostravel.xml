@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="5.0" method="upgrade">
+    <name>com_brostravel</name>
+    <author>Bros Travel</author>
+    <version>1.0.0</version>
+    <description>Bros Travel MVC Starter</description>
+
+    <files folder="components/com_brostravel">
+        <filename>brostravel.php</filename>
+        <filename>controller.php</filename>
+        <folder>views</folder>
+    </files>
+
+    <administration>
+        <files folder="administrator/components/com_brostravel">
+            <filename>brostravel.php</filename>
+        </files>
+    </administration>
+</extension>
